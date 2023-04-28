@@ -16,4 +16,17 @@ const content = fs.readFileSync(path.join(
   fileName
 ), 'utf-8');
 
-solution(content);
+
+let split = content.split('\r\n')
+let vvv = split.slice(1, split.length)
+console.log(`всего пассажиров ${vvv.length-1}`);
+
+
+let ttt = split.map(r => r.split(',')[12])
+let uniques = []
+for(let port of ttt){
+  if(!uniques.includes(port) && port !== '' && port !== undefined){
+    uniques.push(port)
+  }
+}
+console.log(`именования портов ${uniques}`);

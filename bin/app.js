@@ -45,4 +45,29 @@ let zzz = yyy.map(r =>{
   return
 })
 let sootnochenie = male/female
-console.log(`Соотношение ${sootnochenie}`);
+console.log(`Соотношение ${Math.round(sootnochenie)}`);
+
+let bbb = vvv.map(r => r.split(',')[1])
+let surv = 0
+let death = 0
+let mmm = bbb.map(r => {
+  if(r === '1'){
+    surv += 1
+  }
+  if(r === '0'){
+    death += 1
+  }
+  return
+})
+let sootnochenie2 = surv/death * 100
+console.log(`процентное соотношение ${Math.round(sootnochenie2)}%`);
+
+let lll = vvv.map(r => r.split(',')[3])
+let namesStartA = []
+let kkk = lll.map(r => {
+  if(r !== undefined && r[1] === 'A'){
+    namesStartA.push(r.slice(1))
+  }
+  return
+})
+console.log(`имен на букву А ${namesStartA}`);

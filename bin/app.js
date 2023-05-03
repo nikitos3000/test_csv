@@ -4,6 +4,7 @@ import { fileURLToPath } from "node:url";
 import path from "node:path";
 import fs from 'fs';
 import solution from '../index.js';
+import { log } from "node:console";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -30,3 +31,18 @@ for(let port of ttt){
   }
 }
 console.log(`именования портов ${uniques}`);
+
+let yyy = vvv.map(r => r.split(',')[5])
+let male = 0
+let female = 0
+let zzz = yyy.map(r =>{
+  if(r === 'male'){
+    male += 1
+  }
+  if(r === 'female'){
+    female += 1
+  }
+  return
+})
+let sootnochenie = male/female
+console.log(`Соотношение ${sootnochenie}`);

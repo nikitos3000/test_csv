@@ -69,5 +69,5 @@ let kkk = lll.map(r => {
     namesStartA.push(r.slice(1))
   }
   return
-})
+});
 console.log(`имен на букву А ${namesStartA}`);
